@@ -24,7 +24,7 @@ const _entries = [
     guide: 'Predictions to increase the probability of pregnancy find.',
   },
 ];
-const Introduction = ({entries = _entries}) => {
+const Introduction = ({entries = _entries, onContinuePress}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.bigTitle}>
@@ -45,9 +45,6 @@ const Introduction = ({entries = _entries}) => {
           inactiveSlideShift={5}
         />
       </View>
-      <Button mode="contained" color={palette.primary}>
-        <Text style={styles.smallTitle}>Continue</Text>
-      </Button>
     </View>
   );
 };

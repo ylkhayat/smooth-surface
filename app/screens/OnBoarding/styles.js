@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: palette.lightPrimary,
     flex: 1,
     justifyContent: 'space-evenly',
-    alignItems: 'center',
+    paddingVertical: 20,
   },
   bigTitle: {
     fontFamily: PRIMARY.black,
@@ -18,19 +18,20 @@ const styles = StyleSheet.create({
   smallTitle: {
     fontFamily: PRIMARY.light,
     color: palette.grey,
-
     fontSize: 17,
   },
-  slide: {
-    backgroundColor: palette.white,
+  continueButton: {
+    width: '80%',
+    alignSelf: 'center',
   },
-  backgroundImage: {
-    width: width(),
-    height: height(),
+  continueButtonText: {
+    fontFamily: PRIMARY.regular,
+    color: palette.grey,
+    fontSize: 17,
   },
-  countdownText: {
-    fontFamily: PRIMARY.black,
-    fontSize: 25,
+  swiperItemContainer: {
+    flex: 1,
+    marginTop: height(10),
   },
 });
 

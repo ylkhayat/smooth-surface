@@ -1,35 +1,40 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {height, width} from '../../styles/mixins';
 import palette from '../../styles/palette';
 import PRIMARY from '../../styles/typography';
 
-const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     backgroundColor: palette.lightPrimary,
     flex: 1,
     justifyContent: 'space-evenly',
-    alignItems: 'center',
+    padding: 20,
+  },
+  lottieContainer: {
+    left: width(50),
+    bottom: height(40),
+    transform: [{rotateY: '-180deg'}],
   },
   bigTitle: {
     fontFamily: PRIMARY.black,
     color: palette.darkPrimary,
-    fontSize: 40,
+    fontSize: 70,
+    lineHeight: 75,
   },
   smallTitle: {
     fontFamily: PRIMARY.light,
     color: palette.grey,
-
-    fontSize: 17,
+    fontSize: 20,
   },
 
   countdownText: {
-    fontFamily: PRIMARY.black,
+    fontFamily: PRIMARY.regular,
     fontSize: 25,
   },
 
   backgroundImage: {
-    width,
-    height,
+    width: width(),
+    height: height(),
   },
   foregroundTextContainer: {
     flex: 1,
