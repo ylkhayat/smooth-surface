@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import {height, width} from '../../styles/mixins';
 import palette from '../../styles/palette';
-import PRIMARY from '../../styles/typography';
+import {PRIMARY} from '../../styles/typography';
 
 const styles = StyleSheet.create({
   container: {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   continueButtonText: {
-    fontFamily: PRIMARY.regular,
+    fontFamily: PRIMARY.bold,
     color: palette.grey,
     fontSize: 17,
   },

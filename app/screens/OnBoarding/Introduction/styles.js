@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import palette from 'styles/palette';
-import PRIMARY from 'styles/typography';
+import {PRIMARY} from 'styles/typography';
 import {height} from '../../../styles/mixins';
 
 const styles = StyleSheet.create({
@@ -33,12 +33,15 @@ const carouselStyles = StyleSheet.create({
   itemIconContainer: {
     height: '25%',
     justifyContent: 'center',
+    marginVertical: 10,
   },
   itemIcon: {
     backgroundColor: palette.primary,
     height: height(10),
     width: height(10),
     borderRadius: height(10),
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   itemTitleContainer: {
     marginVertical: 10,
@@ -47,7 +50,7 @@ const carouselStyles = StyleSheet.create({
     fontFamily: PRIMARY.bold,
     color: palette.grey,
     fontSize: 30,
-    lineHeight: 30,
+    lineHeight: 35,
   },
   itemGuide: {
     fontFamily: PRIMARY.regular,
@@ -82,7 +85,7 @@ const carouselStyles = StyleSheet.create({
   },
   slideContentContainer: {
     flex: 1,
-    width: '80%',
+    width: '85%',
   },
 });
 

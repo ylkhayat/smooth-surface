@@ -29,7 +29,9 @@ const GuideItem = ({item}) => {
 
       <View style={carouselStyles.slideContentContainer}>
         <View style={carouselStyles.itemIconContainer}>
-          <View style={carouselStyles.itemIcon} />
+          <View style={carouselStyles.itemIcon}>
+            <Icon name={item.icon} color={palette.grey} size={25} />
+          </View>
         </View>
         <View style={carouselStyles.itemTitleContainer}>
           <Text style={carouselStyles.itemTitle}>{item.title}</Text>

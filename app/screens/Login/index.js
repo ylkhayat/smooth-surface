@@ -41,7 +41,7 @@ const Login = () => {
           You will be redirected,{'\n'}shortly! 🛰
         </Text>
       </View>
-      <View style={{alignItems: 'center'}}>
+      <View style={styles.countdownContainer}>
         <CountdownCircleTimer
           isPlaying
           duration={6}

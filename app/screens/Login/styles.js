@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
-import {height, width} from '../../styles/mixins';
-import palette from '../../styles/palette';
-import PRIMARY from '../../styles/typography';
+import {height, width} from 'styles/mixins';
+import palette from 'styles/palette';
+import {PRIMARY} from 'styles/typography';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     color: palette.grey,
     fontSize: 20,
   },
-
+  countdownContainer: {alignItems: 'center'},
   countdownText: {
     fontFamily: PRIMARY.regular,
     fontSize: 25,

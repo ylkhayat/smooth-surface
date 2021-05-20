@@ -1,12 +1,9 @@
 import React from 'react';
-import {View, Text, Dimensions} from 'react-native';
-import RNCarousel from 'react-native-snap-carousel';
-import styles, {carouselStyles} from './styles';
-import GuideItem from './GuideItem';
+import {View, Text, Dimensions, StyleSheet} from 'react-native';
+import styles from './styles';
+import LottieView from 'lottie-react-native';
 
 const SCREEN_DIM = Dimensions.get('window');
-
-const _renderItem = ({item, index}) => <GuideItem item={item} />;
 
 const _entries = [
   {
@@ -25,16 +22,24 @@ const _entries = [
     icon: 'female',
   },
 ];
-const Introduction = ({entries = _entries, onContinuePress}) => {
+
+const Headlines = ({entries = _entries, onContinuePress}) => {
   return (
     <View style={styles.container}>
+      <View style={StyleSheet.absoluteFillObject}>
+        <LottieView
+          source={require('app/assets/violinist.json')}
+          autoPlay
+          loop
+        />
+      </View>
       <Text style={styles.bigTitle}>
         Hola!{'\n'}I am your{'\n'}assistant
       </Text>
       <Text style={styles.smallTitle}>
         To assist you all part of your body.{'\n'}Select what brings you here.
       </Text>
-      <View style={carouselStyles.carouselContainer}>
+      {/* <View style={carouselStyles.carouselContainer}>
         <RNCarousel
           data={entries}
           renderItem={_renderItem}
@@ -45,9 +50,9 @@ const Introduction = ({entries = _entries, onContinuePress}) => {
           contentContainerCustomStyle={carouselStyles.carouselContentContainer}
           inactiveSlideShift={5}
         />
-      </View>
+      </View> */}
     </View>
   );
 };
 
-export default Introduction;
+export default Headlines;

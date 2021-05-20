@@ -2,6 +2,7 @@ import React, {useState, useRef} from 'react';
 import {View, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import Introduction from './Introduction';
+import Headlines from './Headlines';
 import styles from './styles';
 import palette from '../../styles/palette';
 import {Button} from 'react-native-paper';
@@ -50,7 +51,7 @@ const OnBoarding = () => {
           <Introduction />
         </SwiperItem>
         <SwiperItem>
-          <Introduction />
+          <Headlines />
         </SwiperItem>
         <SwiperItem>
           <Introduction />
