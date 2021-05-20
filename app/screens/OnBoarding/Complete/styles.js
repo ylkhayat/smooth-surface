@@ -16,6 +16,12 @@ const styles = StyleSheet.create({
     fontFamily: PRIMARY.bold,
     color: palette.grey,
     fontSize: 45,
+    flexWrap: 'wrap',
+  },
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   bigTitle: {
     fontFamily: PRIMARY.thin,
@@ -37,11 +43,23 @@ const styles = StyleSheet.create({
     color: palette.grey,
     fontSize: 17,
   },
-  guideContainer: {width: '75%'},
+  guideContainer: {
+    width: '75%',
+    marginTop: 40,
+  },
   guideText: {
     fontFamily: PRIMARY.semibold,
     color: palette.grey,
     fontSize: 17,
+  },
+  dateContainer: {
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  dateText: {
+    fontFamily: PRIMARY.thin,
+    color: palette.grey,
+    fontSize: 30,
   },
 });
 

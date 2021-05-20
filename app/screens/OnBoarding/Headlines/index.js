@@ -8,7 +8,7 @@ import {TextInput} from 'react-native-paper';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {PRIMARY} from '../../../styles/typography';
 import {useDispatch} from 'react-redux';
-import {onChangeName} from 'store/actions/onBoardingActions';
+import {doChangeName} from 'store/actions/onBoardingActions';
 
 const _start = {x: 0.5, y: 0.5};
 const _end = {x: 0.5, y: 1};
@@ -21,7 +21,7 @@ const _colors = [palette.white, palette.lightPrimary];
 const Headlines = () => {
   const dispatch = useDispatch();
   const onChangeText = text => {
-    dispatch(onChangeName(text));
+    dispatch(doChangeName(text));
   };
   return (
     <KeyboardAwareScrollView>

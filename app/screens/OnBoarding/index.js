@@ -8,6 +8,7 @@ import palette from '../../styles/palette';
 import {Button} from 'react-native-paper';
 import Swiper from 'react-native-swiper';
 import {height} from '../../styles/mixins';
+import {useSelector} from 'react-redux';
 
 const SwiperItem = ({children}) => (
   <View style={styles.swiperItemContainer}>{children}</View>
@@ -17,9 +18,13 @@ const OnBoarding = () => {
   const swiperRef = useRef();
   const [currentPage, setCurrentPage] = useState(0);
   const [proceed, setProceed] = useState(true);
+  const {name} = useSelector(state => state.boardingReducer);
 
   const onContinuePress = () => {
     if (proceed) {
+      if (currentPage === 1 && !name) {
+        return;
+      }
       if (currentPage >= 1) {
         setProceed(false);
       }

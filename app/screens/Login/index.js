@@ -44,7 +44,7 @@ const Login = () => {
       <View style={styles.countdownContainer}>
         <CountdownCircleTimer
           isPlaying
-          duration={6}
+          duration={3}
           colors={_countdownColors}
           onComplete={onComplete}>
           {_renderCountdownText}
