@@ -6,12 +6,23 @@ import LinearGradient from 'react-native-linear-gradient';
 import palette from 'styles/palette';
 import {TextInput} from 'react-native-paper';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {PRIMARY} from '../../../styles/typography';
+import {useDispatch} from 'react-redux';
+import {onChangeName} from 'store/actions/onBoardingActions';
 
 const _start = {x: 0.5, y: 0.5};
-const _end = {x: 0.5, y: 0.9};
+const _end = {x: 0.5, y: 1};
+const _theme = {
+  fonts: {regular: ''},
+  colors: {primary: palette.orange},
+};
 const _colors = [palette.white, palette.lightPrimary];
 
 const Headlines = () => {
+  const dispatch = useDispatch();
+  const onChangeText = text => {
+    dispatch(onChangeName(text));
+  };
   return (
     <KeyboardAwareScrollView>
       <LinearGradient
@@ -28,13 +39,30 @@ const Headlines = () => {
             />
           </View>
           <View style={styles.subContainer}>
-            <Text style={styles.bigTitle}>Breathe!</Text>
-            <Text style={styles.smallTitle}>
-              We will have your back through out the entire process. No need to
-              worry about anything.
-            </Text>
-            <TextInput label="Email" caretHidden dense />
-            <TextInput />
+            <View>
+              <Text style={styles.bigTitle}>Breathe!</Text>
+              <Text style={styles.smallTitle}>
+                We will have your back through out the entire process. No need
+                to worry about anything.
+              </Text>
+            </View>
+            <View style={styles.guideContainer}>
+              <Text style={styles.guideText}>
+                Completely tailored and personal!{'\n'}What shall we call you?
+              </Text>
+              <TextInput
+                label="Name"
+                dense
+                mode="outlined"
+                underlineColor={palette.primary}
+                placeholderTextColor={palette.primary}
+                style={styles.guideTextInput}
+                selectionColor={palette.primary}
+                fontFamily={PRIMARY.light}
+                theme={_theme}
+                onChangeText={onChangeText}
+              />
+            </View>
           </View>
         </View>
       </LinearGradient>

@@ -1,8 +1,8 @@
 import React, {useState, useRef} from 'react';
 import {View, Text} from 'react-native';
-import {useSelector} from 'react-redux';
 import Introduction from './Introduction';
 import Headlines from './Headlines';
+import Complete from './Complete';
 import styles from './styles';
 import palette from '../../styles/palette';
 import {Button} from 'react-native-paper';
@@ -14,7 +14,6 @@ const SwiperItem = ({children}) => (
 );
 
 const OnBoarding = () => {
-  const id = useSelector(state => state.loginReducer.id);
   const swiperRef = useRef();
   const [currentPage, setCurrentPage] = useState(0);
   const [proceed, setProceed] = useState(true);
@@ -52,7 +51,7 @@ const OnBoarding = () => {
         </SwiperItem>
         <Headlines />
         <SwiperItem>
-          <Introduction />
+          <Complete />
         </SwiperItem>
       </Swiper>
       <Button

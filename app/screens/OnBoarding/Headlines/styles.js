@@ -6,18 +6,21 @@ import {height, width} from '../../../styles/mixins';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: palette.white,
     paddingTop: 40,
   },
-  gradientContainer: {flex: 1},
+  gradientContainer: {
+    flex: 1,
+    height: height(90),
+  },
   lottieContainer: {
     backgroundColor: palette.white,
-    top: 0,
     height: height(40),
     width: width(100),
   },
   subContainer: {
+    flex: 1,
     padding: 20,
+    justifyContent: 'space-between',
   },
   bigTitle: {
     fontFamily: PRIMARY.thin,
@@ -27,6 +30,22 @@ const styles = StyleSheet.create({
   },
   smallTitle: {
     fontFamily: PRIMARY.regular,
+    color: palette.grey,
+    fontSize: 17,
+  },
+  guideContainer: {
+    marginVertical: 10,
+    justifyContent: 'center',
+  },
+  guideText: {
+    fontFamily: PRIMARY.semibold,
+    color: palette.grey,
+    fontSize: 17,
+  },
+  guideTextInput: {
+    backgroundColor: palette.white,
+    borderWidth: 0,
+    fontFamily: PRIMARY.semibold,
     color: palette.grey,
     fontSize: 17,
   },

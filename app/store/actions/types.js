@@ -11,3 +11,7 @@ export const LOGIN_RESPONSE = 'LOGIN_RESPONSE';
 export const LOGIN_LOADING_ENDED = 'LOGIN_LOADING_ENDED';
 export const LOGIN_FAILED = 'LOGIN_FAILED';
 export const LOG_OUT = 'LOG_OUT';
+
+// on boarding
+export const ON_BOARDING_NAME = 'ON_BOARDING_NAME';
+export const ON_BOARDING_BIRTH_DATE = 'ON_BOARDING_BIRTH_DATE';

@@ -5,6 +5,7 @@ const PRIMARY = {
   thin: 'Poppins-Thin',
   regular: 'Poppins-Regular',
   bold: 'Poppins-Bold',
+  semibold: 'Poppins-SemiBold',
 };
 
 const SECONDARY = {

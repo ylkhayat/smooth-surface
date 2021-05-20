@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "101174079799",
+    "project_id": "smooth-surface",
+    "storage_bucket": "smooth-surface.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101174079799:android:337308662fe23714c6aab2",
+        "android_client_info": {
+          "package_name": "com.smoothsurface"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101174079799-si73nai492fmpih99tr1dne4r8ib2nbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPHx7ElMxo4EBaqiQlcJ6LvglDMpWjSZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101174079799-si73nai492fmpih99tr1dne4r8ib2nbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
