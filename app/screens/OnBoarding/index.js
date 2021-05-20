@@ -50,9 +50,7 @@ const OnBoarding = () => {
         <SwiperItem>
           <Introduction />
         </SwiperItem>
-        <SwiperItem>
-          <Headlines />
-        </SwiperItem>
+        <Headlines />
         <SwiperItem>
           <Introduction />
         </SwiperItem>

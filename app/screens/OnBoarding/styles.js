@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: palette.lightPrimary,
     flex: 1,
     justifyContent: 'space-evenly',
-    paddingVertical: 20,
+    paddingBottom: 20,
   },
   bigTitle: {
     fontFamily: PRIMARY.black,
