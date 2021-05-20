@@ -1,31 +1,39 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {Animated, View} from 'react-native';
-import {Text, Button} from 'react-native-paper';
-import {useDispatch, useSelector} from 'react-redux';
+import {Text} from 'react-native-paper';
 import {CountdownCircleTimer} from 'react-native-countdown-circle-timer';
 
-import * as loginActions from 'app/store/actions/loginActions';
 import styles from './styles';
+import palette from '../../styles/palette';
+import {useNavigation} from '@react-navigation/core';
 
 const _countdownColors = [
-  ['#004777', 0.4],
-  ['#F7B801', 0.4],
-  ['#A30000', 0.2],
+  [palette.purpleDark, 0.4],
+  [palette.purplePrimary, 0.4],
+  [palette.purpleDark, 0.2],
 ];
 
 const _renderCountdownText = ({remainingTime, animatedColor}) => (
-  <Animated.Text style={{color: animatedColor}}>{remainingTime}</Animated.Text>
+  <Animated.Text style={[styles.countdownText, {color: animatedColor}]}>
+    {remainingTime}
+  </Animated.Text>
 );
 
 const Login = () => {
-  const id = useSelector(state => state.loginReducer.id);
-  const dispatch = useDispatch();
+  const {navigate} = useNavigation();
+  const onComplete = useCallback(() => navigate('OnBoarding'), [navigate]);
+
   return (
     <View style={styles.container}>
-      <Text style={{fontFamily: 'Poppins-Black'}}>
-        You will be redirected shortly! 🛰
-      </Text>
-      <CountdownCircleTimer isPlaying duration={10} colors={_countdownColors}>
+      <View>
+        <Text style={styles.bigTitle}>HANG ON!</Text>
+        <Text style={styles.smallTitle}>You will be redirected shortly! 🛰</Text>
+      </View>
+      <CountdownCircleTimer
+        isPlaying
+        duration={6}
+        colors={_countdownColors}
+        onComplete={onComplete}>
         {_renderCountdownText}
       </CountdownCircleTimer>
     </View>

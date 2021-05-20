@@ -7,6 +7,8 @@ import {navigationRef} from './NavigationService';
 
 import Login from 'app/screens/Login';
 import Home from 'app/screens/Home';
+import OnBoarding from 'app/screens/OnBoarding';
+import Introduction from 'app/screens/OnBoarding/Introduction';
 
 import ThemeController from '../components/ThemeController';
 import {StatusBar} from 'react-native';
@@ -27,16 +29,8 @@ const AuthNavigator = () => {
   const isLoggedIn = useSelector(state => state.loginReducer.isLoggedIn);
   return (
     <AuthStack.Navigator headerMode="none">
-      <Stack.Screen
-        name="Login"
-        component={Login}
-        options={{
-          // When logging out, a pop animation feels intuitive
-          // You can remove this if you want the default 'push' animation
-          animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-          headerRight: () => <ThemeController />,
-        }}
-      />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="OnBoarding" component={OnBoarding} />
     </AuthStack.Navigator>
   );
 };
@@ -63,16 +57,7 @@ const App = props => {
             options={homeOptions}
           />
         ) : (
-          <Stack.Screen
-            name="Login"
-            component={AuthNavigator}
-            options={{
-              // When logging out, a pop animation feels intuitive
-              // You can remove this if you want the default 'push' animation
-              animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-              headerRight: () => <ThemeController />,
-            }}
-          />
+          <Stack.Screen name="Login" component={AuthNavigator} />
         )}
       </Stack.Navigator>
     </NavigationContainer>

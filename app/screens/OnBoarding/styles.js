@@ -1,19 +1,36 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
+import {height, width} from '../../styles/mixins';
+import palette from '../../styles/palette';
+import PRIMARY from '../../styles/typography';
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: palette.lightPrimary,
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
   },
-  login: {
-    padding: 8,
+  bigTitle: {
+    fontFamily: PRIMARY.black,
+    color: palette.darkPrimary,
+    fontSize: 40,
   },
-  forgot: {
-    marginTop: 12,
+  smallTitle: {
+    fontFamily: PRIMARY.light,
+    color: palette.grey,
+
+    fontSize: 17,
   },
-  labelStyle: {
-    fontSize: 12,
+  slide: {
+    backgroundColor: palette.white,
+  },
+  backgroundImage: {
+    width: width(),
+    height: height(),
+  },
+  countdownText: {
+    fontFamily: PRIMARY.black,
+    fontSize: 25,
   },
 });
 
