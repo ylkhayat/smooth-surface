@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     fontFamily: PRIMARY.bold,
     color: palette.grey,
     fontSize: 45,
+    lineHeight: 55,
     flexWrap: 'wrap',
   },
   titleContainer: {
@@ -67,6 +68,11 @@ const styles = StyleSheet.create({
     fontFamily: PRIMARY.thin,
     color: palette.grey,
     fontSize: 30,
+  },
+  greetingsContainer: {flex: 1},
+  greetingsSubContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });
 

@@ -9,27 +9,26 @@ import {doChangeBirthdate} from 'store/actions/onBoardingActions';
 const Complete = () => {
   const dispatch = useDispatch();
   const {name} = useSelector(state => state.boardingReducer);
-  const [date, setDate] = useState(new Date(1598051730000));
+  const [date, setDate] = useState(new Date());
   const [show, setShow] = useState(false);
 
   const onChange = (_, selectedDate) => {
+    setShow(false);
     const currentDate = selectedDate || date;
     dispatch(doChangeBirthdate(currentDate));
-    setShow(Platform.OS === 'ios');
     setDate(currentDate);
   };
 
   const showMode = () => {
     setShow(true);
   };
-
+  console.log(date);
   return (
     <View style={styles.container}>
       <View style={styles.subContainer}>
         <View style={styles.titleContainer}>
-          <View>
-            <View
-              style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={styles.greetingsContainer}>
+            <View style={styles.greetingsSubContainer}>
               <Text style={styles.bigTitle}>Aloha,</Text>
               <Text style={styles.bigTitle}>👋</Text>
             </View>
@@ -61,7 +60,7 @@ const Complete = () => {
           />
         ) : (
           <TouchableOpacity style={styles.dateContainer} onPress={showMode}>
-            <Text style={styles.dateText}>{format(date, 'io MMMM, yyyy')}</Text>
+            <Text style={styles.dateText}>{format(date, 'dd MMMM, yyyy')}</Text>
           </TouchableOpacity>
         )}
       </View>
@@ -69,7 +68,6 @@ const Complete = () => {
         <DateTimePicker
           value={date}
           mode="date"
-          is24Hour={true}
           display="default"
           onChange={onChange}
           maximumDate={new Date()}
