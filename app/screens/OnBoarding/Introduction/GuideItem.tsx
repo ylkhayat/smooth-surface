@@ -10,7 +10,7 @@ const SelectedIndicator = ({selected}: any) => (
   <View style={carouselStyles.indicatorContainer}>
     <Animatable.View
       style={carouselStyles.indicatorContentContainer}
-      animation={selected ? 'bounceIn' : 'fadeOut'}>
+      animation={selected ? 'bounceIn' : 'fadeOutRight'}>
       <Icon name="check" color={palette.white} />
     </Animatable.View>
   </View>

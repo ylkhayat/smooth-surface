@@ -7,18 +7,20 @@ import palette from 'styles/palette';
 import {TextInput} from 'react-native-paper';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {PRIMARY} from '../../../styles/typography';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {doChangeName} from 'store/actions/onBoardingActions';
 
 const _start = {x: 0.5, y: 0.5};
 const _end = {x: 0.5, y: 1};
-const _theme = {
+const _theme: ReactNativePaper.Theme = {
   fonts: {regular: ''},
   colors: {primary: palette.orange},
 };
 const _colors = [palette.white, palette.lightPrimary];
 
 const Headlines = () => {
+  const {name, processError} = useSelector(state => state.boardingReducer);
+
   const dispatch = useDispatch();
   const onChangeText = text => {
     dispatch(doChangeName(text));
@@ -54,6 +56,8 @@ const Headlines = () => {
                 label="Name"
                 dense
                 mode="outlined"
+                error={processError}
+                defaultValue={name}
                 underlineColor={palette.primary}
                 placeholderTextColor={palette.primary}
                 style={styles.guideTextInput}

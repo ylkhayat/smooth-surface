@@ -26,17 +26,16 @@ const styles = StyleSheet.create({
   bigTitle: {
     fontFamily: PRIMARY.thin,
     color: palette.grey,
-    fontSize: 45,
-    lineHeight: 55,
+    fontSize: 40,
   },
   motivationTitle: {
-    fontFamily: PRIMARY.semibold,
+    fontFamily: PRIMARY.thin,
     color: palette.grey,
-    fontSize: 30,
-    lineHeight: 40,
+    fontSize: 25,
+    marginBottom: 20,
   },
   smallTitleContainer: {
-    marginVertical: 20,
+    marginVertical: 10,
   },
   smallTitle: {
     fontFamily: PRIMARY.regular,
@@ -53,8 +52,16 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   dateContainer: {
+    width: '100%',
     alignItems: 'center',
     marginTop: 20,
+  },
+  iOSDateContainer: {
+    marginTop: 20,
+    width: '100%',
+    alignSelf: 'flex-end',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   dateText: {
     fontFamily: PRIMARY.thin,

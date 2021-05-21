@@ -36,14 +36,13 @@ const Introduction = ({entries = _entries, onContinuePress}) => {
       </Text>
       <View style={carouselStyles.carouselContainer}>
         <RNCarousel
+          useScrollView
           data={entries}
           renderItem={_renderItem}
           sliderWidth={SCREEN_DIM.width}
           itemWidth={SCREEN_DIM.width / 1.7}
-          centerContent={false}
           activeSlideAlignment={'start'}
           contentContainerCustomStyle={carouselStyles.carouselContentContainer}
-          inactiveSlideShift={5}
         />
       </View>
     </View>

@@ -13,3 +13,9 @@ export function doChangeBirthdate(newDate: any) {
     payload: newDate,
   };
 }
+
+export function doSkipName() {
+  return {
+    type: types.ON_BOARDING_SKIP_NAME,
+  };
+}
