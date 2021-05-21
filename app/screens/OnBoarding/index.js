@@ -6,7 +6,6 @@ import Complete from './Complete';
 import styles from './styles';
 import palette from '../../styles/palette';
 import Swiper from 'react-native-swiper';
-import {height} from '../../styles/mixins';
 import {useDispatch, useSelector} from 'react-redux';
 import {doSkipName} from 'store/actions/onBoardingActions';
 
@@ -49,9 +48,9 @@ const OnBoarding = () => {
         showsPagination
         scrollEnabled={false}
         loop={false}
-        paginationStyle={{bottom: undefined, top: height(5)}}
-        dotStyle={{backgroundColor: palette.slightlyDarkPrimary}}
-        activeDotStyle={{backgroundColor: palette.orange}}>
+        paginationStyle={styles.swiperPaginationStyle}
+        dotStyle={styles.swiperDotStyle}
+        activeDotStyle={styles.swiperActiveDotStyles}>
         <SwiperItem>
           <Introduction />
         </SwiperItem>

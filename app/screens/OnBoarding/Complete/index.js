@@ -22,7 +22,7 @@ const Complete = () => {
   const showMode = () => {
     setShow(true);
   };
-  console.log(date);
+
   return (
     <View style={styles.container}>
       <View style={styles.subContainer}>

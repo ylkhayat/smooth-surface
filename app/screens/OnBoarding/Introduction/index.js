@@ -6,7 +6,7 @@ import GuideItem from './GuideItem';
 
 const SCREEN_DIM = Dimensions.get('window');
 
-const _renderItem = ({item, index}) => <GuideItem item={item} />;
+const _renderItem = ({item}) => <GuideItem item={item} />;
 
 const _entries = [
   {

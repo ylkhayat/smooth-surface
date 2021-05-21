@@ -76,6 +76,17 @@ const carouselStyles = StyleSheet.create({
     padding: 5,
     borderRadius: 10,
   },
+  slideMainContainer: {
+    // TODO
+    // shadowColor: '#000',
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 3,
+    // },
+    // shadowOpacity: 0.27,
+    // shadowRadius: 4.65,
+    // elevation: 6,
+  },
   slideContainer: {
     backgroundColor: palette.white,
     height: '100%',

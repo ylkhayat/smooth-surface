@@ -39,6 +39,16 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: height(10),
   },
+  swiperPaginationStyle: {
+    bottom: undefined,
+    top: height(5),
+  },
+  swiperDotStyle: {
+    backgroundColor: palette.slightlyDarkPrimary,
+  },
+  swiperActiveDotStyles: {
+    backgroundColor: palette.orange,
+  },
 });
 
 export default styles;
